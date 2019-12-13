@@ -7,7 +7,7 @@ import javax.swing.event.ListSelectionListener;
 
 public class NBA extends JFrame {
     //add key val of hashmap to key model
-    //list data listener
+    //used to manage items displayed by a JList
     DefaultListModel<String> model =  new DefaultListModel<>();
     //selection of multiple objects from a list
     private JList<String>list = new JList<>(model);
@@ -15,19 +15,19 @@ public class NBA extends JFrame {
     JPanel panel  = new JPanel();
     JLabel labelForImages = new JLabel();
 
-    HashMap<String , String> map =  new HashMap<>(); //associate each string with a file
-
+    /*
+        Declare and initialize HashMap here. Make Key and Value of type String
+    */
 
 
     public NBA(){
+
+        //Task:
         super("NBA Players");
 
-        map.put("Stephen Curry", "C:\\Users\\Peter Farquharson\\IdeaProjects\\TechnicalInterviewing\\src\\Hashmap\\curry.jpg");
-        map.put("Lebron James", "C:\\Users\\Peter Farquharson\\IdeaProjects\\TechnicalInterviewing\\src\\Hashmap\\lebron.jpg");
-        map.put("Kevin Durant", "C:\\Users\\Peter Farquharson\\IdeaProjects\\TechnicalInterviewing\\src\\Hashmap\\KD.jpg");
-        map.put("Giannis Antetokounmpo", "C:\\Users\\Peter Farquharson\\IdeaProjects\\TechnicalInterviewing\\src\\Hashmap\\giannis.jpg");
-        map.put("James Harden", "C:\\Users\\Peter Farquharson\\IdeaProjects\\TechnicalInterviewing\\src\\Hashmap\\Harden.jpg");
-
+        /*
+            Put Keys(Player Names) and Values(Image path) in the HashMap here
+        */
 
         for(Object obj : map.keySet()){
             model.addElement((String.valueOf(obj)));
